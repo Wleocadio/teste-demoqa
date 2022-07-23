@@ -91,7 +91,7 @@ Cypress.Commands.add('excluindo_WebTables', dados =>{
     .parent('.rt-tr')
     .within(() => {
 // all searches are automatically rooted to the found tr element
-    cy.get('.rt-td').eq(1).contains(dados.sobrenome)
+    cy.get('.rt-td').eq(1).contains(dados.sobrenome) 
     cy.get('.rt-td .action-buttons').find('span').eq(1).click()
     
 })
