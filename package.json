@@ -1,0 +1,25 @@
+{
+  "name": "teste-demoqa",
+  "version": "1.0.0",
+  "description": "Testando habilidades adquiridas nos cursos de cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wleocadio/teste-demoqa.git"
+  },
+  "author": "Wellington Leocádio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wleocadio/teste-demoqa/issues"
+  },
+  "homepage": "https://github.com/Wleocadio/teste-demoqa#readme",
+  "dependencies": {
+    "cypress": "^9.7.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.3.0"
+  }
+}
