@@ -58,7 +58,7 @@ describe('Testando elementos', () => {
           cy.buttons()
      })
 
-     it.only('Clicando nos links de APIS', () => {
+     it('Clicando nos links de APIS', () => {
           cy.link_Apis()
      })
 

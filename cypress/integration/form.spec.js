@@ -37,7 +37,7 @@ describe('Praticando Form', () => {
         cy.alerta(1)
     })
 
-    it.only('Tentar cadastrar sem selecionar o gênero', () => {
+    it('Tentar cadastrar sem selecionar o gênero', () => {
         cy.cadastro_Genero(dados)
         cy.alerta_Radio()
     })
