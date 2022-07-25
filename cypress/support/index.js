@@ -21,5 +21,6 @@ import './elements_commands'
 Cypress.on('uncaught:exception', (err) => {
     return false
   })
-  
+
+
   // patch Cypress top.onerror
