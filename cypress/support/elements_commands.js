@@ -123,7 +123,8 @@ Cypress.Commands.add('buttons', () => {
 
 Cypress.Commands.add('link_Apis', ()=>{
     cy.visit('links')
-    cy.get('#created').click()
+    
+    cy.get('#created').click()  
     cy.contains('#linkResponse','Link has responded with staus 201 and status text Created').should('be.visible')
     cy.get('#no-content').click()
     cy.contains('Link has responded with staus 204 and status text No Content').should('be.visible')
