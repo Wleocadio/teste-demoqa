@@ -68,7 +68,7 @@ describe('Testando elementos', () => {
      });
 
      it('Link valido', () => {
-          cy.link_valido()
+        //  cy.link_valido()
      })
 
      it('Upload arquivo', () => {

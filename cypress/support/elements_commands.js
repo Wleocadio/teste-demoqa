@@ -149,7 +149,7 @@ Cypress.Commands.add('verifica_Imagem', ()=>{
 Cypress.Commands.add('link_valido', ()=>{
     cy.visit('broken')
     cy.contains('Click Here for Valid Link').click()
-    //cy.get('.home-banner').find('img').should('have.attr', 'src').should('include','WB')
+    cy.get('.home-banner').find('img').should('have.attr', 'src').should('include','WB')
     
 })
 
