@@ -26,6 +26,7 @@ jobs:
       - name: cypress run 
         uses: cypress-io/github-action@v2
         with:
+          install-command: yarn install
           browser: chrome
           record: true
           group: 'UI - Chrome'
