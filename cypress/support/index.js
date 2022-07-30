@@ -16,6 +16,9 @@
 // Import commands.js using ES2015 syntax:
 import './elements_commands'
 import './form_commands'
+import './alerts_commands'
+import './modals_commands'
+import './widgets_commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
