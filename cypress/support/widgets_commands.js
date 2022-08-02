@@ -49,3 +49,53 @@ Cypress.Commands.add('slider', valor=>{
     })
 })
 
+Cypress.Commands.add('progressBar', ()=>{
+    cy.visit('progress-bar')
+    cy.get('#startStopButton').should('be.visible').click()
+    cy.wait(2000);
+    cy.get('#progressBar').should('contain','33')
+    cy.get('#startStopButton').click()
+})
+
+Cypress.Commands.add('tabs',()=>{
+    cy.visit('tabs');
+    cy.get('#tabsContainer').contains('Use').click()
+    cy.contains('injected humour and the like').should('be.visible')
+
+    cy.get('#tabsContainer').contains('What').click()
+    cy.contains('including versions of Lorem Ipsum').should('be.visible')
+
+    cy.get('#tabsContainer').contains('Origin').click()
+    cy.contains('1914 translation by H. Rackham').should('be.visible')
+})
+
+Cypress.Commands.add('toolTips', ()=>{
+    cy.visit('tool-tips');
+    cy.get('#toolTipButton').trigger('mouseover')
+    cy.get('.tooltip-inner').should('be.visible').should('contain','You hovered over the Button')
+
+    cy.get('#toolTipTextField').trigger('mouseover')
+    cy.get('.tooltip-inner').should('be.visible').should('contain','You hovered over the text field')
+
+    
+})
+
+Cypress.Commands.add('subMenu',()=>{
+    cy.visit('menu#');
+    cy.contains('Main Item 2').trigger('mousedown', {button: 2}).trigger('mousedown',{butto:1})
+})
+
+Cypress.Commands.add('selectMenu',()=>{
+    cy.visit('select-menu')
+    cy.get('#withOptGroup').click().contains('A root option').click()
+    cy.get('.css-1uccc91-singleValue').should('contain','A root option')
+
+    cy.get('#selectOne').type('P{enter}').should('contain','Prof.')
+
+    cy.get('#oldSelectMenu').select('Indigo',{force:true}).should('contain','Indigo')
+
+    cy.get('input[type="text"]').eq(2).type('G{enter}',{force:true}).type('{esc}',{force:true})
+
+    cy.get('#cars').select('Opel').invoke('val').should('contain','opel')
+
+})
