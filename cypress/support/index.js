@@ -19,6 +19,7 @@ import './form_commands'
 import './alerts_commands'
 import './modals_commands'
 import './widgets_commands'
+import './interactions_commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
