@@ -1,2 +1,2 @@
 # teste-demoqa
-Testando habilidades adquiridas nos cursos de cypress
+Testando os modulos do site demoqa.com, utilizando os conhecimentos adquiridos nos cursos de Cypress
